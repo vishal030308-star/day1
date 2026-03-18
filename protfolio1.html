@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>My Portfolio</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+  }
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  header h1 {
+    margin: 0;
+  }
+  nav {
+    margin-top: 10px;
+  }
+  nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+  }
+  nav a:hover {
+    text-decoration: underline;
+  }
+  section {
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+  }
+  .about, .projects, .contact {
+    margin-bottom: 40px;
+  }
+  h2 {
+    color: #333;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+  }
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  .project {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+  }
+  a.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+  a.btn:hover {
+    background-color: #45a049;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>My Portfolio</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="about" class="about">
+  <h2>About Me</h2>
+  <p>Hello! I'm [Your Name], a passionate web developer with experience in creating dynamic and responsive websites. Welcome to my portfolio!</p>
+</section>
+
+<section id="projects" class="projects">
+  <h2>Projects</h2>
+  <div class="projects-grid">
+    <div class="project">
+      <h3>Project One</h3>
+      <p>A brief description of my first project. It showcases my skills in HTML, CSS, and JavaScript.</p>
+    </div>
+    <div class="project">
+      <h3>Project Two</h3>
+      <p>A brief description of my second project. It involves a web app built with React and Node.js.</p>
+    </div>
+    <!-- Add more projects as needed -->
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Contact Me</h2>
+  <p>You can reach me at <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+  <a class="btn" href="#about">Download Resume</a>
+</section>
+
+<footer>
+  <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
