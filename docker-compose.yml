@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  web:
+    image: nginx:latest
+    ports:
+      - '80:80'
+    volumes:
+      - ./portfolio:/usr/share/nginx/html
+    environment:
+      - ENV=development
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./app:/app
+    environment:
+      - NODE_ENV=development
+    command: npm start
