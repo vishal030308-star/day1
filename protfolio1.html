@@ -3,82 +3,130 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>My Portfolio</title>
+<title>Vishal Portfolio</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 <style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+
   body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-  }
-  header {
-    background-color: #333;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
     color: #fff;
-    padding: 20px 0;
+  }
+
+  header {
     text-align: center;
+    padding: 30px 20px;
+    backdrop-filter: blur(10px);
   }
+
   header h1 {
-    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 600;
   }
+
   nav {
     margin-top: 10px;
   }
+
   nav a {
     color: #fff;
     margin: 0 15px;
     text-decoration: none;
+    position: relative;
   }
-  nav a:hover {
-    text-decoration: underline;
+
+  nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -4px;
+    background: #fff;
+    transition: 0.3s;
   }
+
+  nav a:hover::after {
+    width: 100%;
+  }
+
   section {
+    max-width: 1100px;
+    margin: 40px auto;
     padding: 20px;
-    max-width: 1000px;
-    margin: auto;
   }
-  .about, .projects, .contact {
-    margin-bottom: 40px;
-  }
+
   h2 {
-    color: #333;
-    border-bottom: 2px solid #ccc;
-    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-left: 4px solid #fff;
+    padding-left: 10px;
   }
+
+  .card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    transition: 0.3s;
+  }
+
+  .card:hover {
+    transform: translateY(-10px) scale(1.02);
+  }
+
   .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
   }
-  .project {
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  }
-  footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 15px 0;
-  }
-  a.btn {
+
+  .btn {
     display: inline-block;
-    margin-top: 10px;
-    padding: 10px 15px;
-    background-color: #4CAF50;
-    color: #fff;
-    border-radius: 4px;
+    margin-top: 15px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background: #fff;
+    color: #333;
     text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
   }
-  a.btn:hover {
-    background-color: #45a049;
+
+  .btn:hover {
+    background: #000;
+    color: #fff;
+  }
+
+  footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background: rgba(0,0,0,0.2);
+  }
+
+  /* Responsive */
+  @media(max-width: 600px) {
+    header h1 {
+      font-size: 1.8rem;
+    }
   }
 </style>
 </head>
+
 <body>
 
 <header>
-  <h1>My Portfolio</h1>
+  <h1>🚀 Vishal Portfolio</h1>
   <nav>
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
@@ -86,34 +134,48 @@
   </nav>
 </header>
 
-<section id="about" class="about">
-  <h2>About Me</h2>
-  <p>Hello! I'm [Your Name], a passionate web developer with experience in creating dynamic and responsive websites. Welcome to my portfolio!</p>
-</section>
-
-<section id="projects" class="projects">
-  <h2>Projects</h2>
-  <div class="projects-grid">
-    <div class="project">
-      <h3>Project One</h3>
-      <p>A brief description of my first project. It showcases my skills in HTML, CSS, and JavaScript.</p>
-    </div>
-    <div class="project">
-      <h3>Project Two</h3>
-      <p>A brief description of my second project. It involves a web app built with React and Node.js.</p>
-    </div>
-    <!-- Add more projects as needed -->
+<section id="about">
+  <div class="card">
+    <h2>About Me</h2>
+    <p>
+      I'm Vishal, a passionate DevOps & Web Developer 🚀.  
+      I build scalable apps, automate workflows, and deploy production-ready systems using modern tools.
+    </p>
   </div>
 </section>
 
-<section id="contact" class="contact">
-  <h2>Contact Me</h2>
-  <p>You can reach me at <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-  <a class="btn" href="#about">Download Resume</a>
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects-grid">
+
+    <div class="card">
+      <h3>CI/CD Pipeline</h3>
+      <p>Automated deployment using Jenkins, Docker, and AWS.</p>
+    </div>
+
+    <div class="card">
+      <h3>React App</h3>
+      <p>Modern frontend with API integration and responsive UI.</p>
+    </div>
+
+    <div class="card">
+      <h3>Terraform Infra</h3>
+      <p>Infrastructure automation using Terraform on AWS.</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact">
+  <div class="card">
+    <h2>Contact Me</h2>
+    <p>Email: vishalshamkaria@gmail.com</p>
+    <a class="btn" href="#">Download Resume</a>
+  </div>
 </section>
 
 <footer>
-  <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+  <p>© 2026 Vishal | Built with ❤️</p>
 </footer>
 
 </body>
